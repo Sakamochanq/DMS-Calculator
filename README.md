@@ -34,7 +34,7 @@ used in traverses using functions on Excel Cells.
 A1 = 179°50′0″
 B1 = 0°10′0″
 
-=sok_def(A1, B1) //180°0′0″
+=sok_def(A1, B1) #180°0′0″
 ```
 
 <br>
@@ -44,7 +44,7 @@ A1 = 179°30′0″
 A2 = 0°10′0″
 A3 = 0°20′0″
 
-=sok_sum(A1:A3) //180°0′0″
+=sok_sum(A1:A3) #180°0′0″
 ```
 
 <br>
