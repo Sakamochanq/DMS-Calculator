@@ -1,4 +1,14 @@
-## DMS Calculator in Excel VBA 🌵
+<div align="center">
+    <a href="#">
+        <img src="./assets/DMS-Calculator-Logo.png" width="500px">
+    </a>
+    <br>
+    <hr>
+</div>
+
+<br>
+
+DMS Calculator in Excel VBA 🌵
 Excel VBA Script that allows you to perform comfortable calculations of *DMS*  
 used in traverses using functions on Excel Cells.
 
