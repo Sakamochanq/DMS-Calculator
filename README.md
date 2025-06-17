@@ -4,6 +4,12 @@ used in traverses using functions on Excel Cells.
 
 <br>
 
+<div align="center">
+    <img src="./assets/DMS-Calculator-Demo.gif" width="450px">
+</div>
+
+<br>
+
 ### Features
 - [x] Add and range specification.
 - [ ] Simplified handling of negative numbers.
