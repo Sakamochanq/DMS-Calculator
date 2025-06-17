@@ -9,6 +9,7 @@ used in traverses using functions on Excel Cells.
 - [ ] Simplified handling of negative numbers.
 - [x] Calculation of cos sin.
 - [ ] Add Compass
+- [x] String to Decimal func.
 - [ ] Refactoring.
 
 <br>

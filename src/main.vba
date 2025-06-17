@@ -104,6 +104,35 @@ Public Function sok_sum(rng As Range) As String
     sok_sum = totalDegrees & "°" & totalMinutes & "′" & totalSeconds & "″"
 End Function
 
+' 度分秒文字列を度（Decimal Degree）に変換
+Private Function DMSStringToDecimal(s As String) As Double
+    Dim deg As Double, min As Double, sec As Double
+    s = Trim(s)
+    
+    ' 負の符号を保持
+    Dim sign As Double
+    sign = 1
+    If Left(s, 1) = "-" Then
+        sign = -1
+        s = Mid(s, 2)
+    End If
+    
+    ' 度分秒を抽出
+    If InStr(s, "°") > 0 Then
+        deg = Val(Left(s, InStr(s, "°") - 1))
+        s = Mid(s, InStr(s, "°") + 1)
+    End If
+    If InStr(s, "′") > 0 Then
+        min = Val(Left(s, InStr(s, "′") - 1))
+        s = Mid(s, InStr(s, "′") + 1)
+    End If
+    If InStr(s, "″") > 0 Then
+        sec = Val(Left(s, InStr(s, "″") - 1))
+    End If
+    
+    DMSStringToDecimal = sign * (deg + min / 60 + sec / 3600)
+End Function
+
 ' sin度分秒の計算
 Function sok_sin(dmsString As String) As Double
     Dim deg As Double
