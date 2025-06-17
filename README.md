@@ -5,7 +5,7 @@ used in traverses using functions on Excel Cells.
 <br>
 
 ### Features
-- [x] Addition and range specification.
+- [x] Add and range specification.
 - [ ] Simplified handling of negative numbers.
 - [ ] Calculation of cos sin.
 - [ ] Refactoring.
