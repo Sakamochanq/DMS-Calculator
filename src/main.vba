@@ -103,3 +103,17 @@ Public Function sok_sum(rng As Range) As String
     ' 結果を文字列として返す
     sok_sum = totalDegrees & "°" & totalMinutes & "′" & totalSeconds & "″"
 End Function
+
+' sin度分秒の計算
+Function sok_sin(dmsString As String) As Double
+    Dim deg As Double
+    deg = DMSStringToDecimal(dmsString)
+    sok_sin = Sin(Application.WorksheetFunction.Radians(deg))
+End Function
+
+' cos度分秒の計算
+Function sok_cos(dmsString As String) As Double
+    Dim deg As Double
+    deg = DMSStringToDecimal(dmsString)
+    sok_cos = Cos(Application.WorksheetFunction.Radians(deg))
+End Function
