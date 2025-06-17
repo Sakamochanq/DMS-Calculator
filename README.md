@@ -8,7 +8,7 @@ used in traverses using functions on Excel Cells.
 - [x] Add and range specification.
 - [ ] Simplified handling of negative numbers.
 - [x] Calculation of cos sin.
-- [ ] Add Compass
+- [x] Add Compass
 - [x] String to Decimal func.
 - [ ] Refactoring.
 

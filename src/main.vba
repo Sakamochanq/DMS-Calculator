@@ -146,3 +146,40 @@ Function sok_cos(dmsString As String) As Double
     deg = DMSStringToDecimal(dmsString)
     sok_cos = Cos(Application.WorksheetFunction.Radians(deg))
 End Function
+
+
+
+Function sok_compass(angle As String) As String
+    Dim degrees As Double
+    Dim minutes As Double
+    Dim seconds As Double
+    Dim totalDegrees As Double
+    Dim parts() As String
+    
+    ' 入力文字列を分解して度・分・秒に分ける
+    angle = Replace(angle, "°", " ")
+    angle = Replace(angle, "′", " ")
+    angle = Replace(angle, "″", " ")
+    parts = Split(angle)
+    
+    If UBound(parts) >= 0 Then degrees = CDbl(parts(0))
+    If UBound(parts) >= 1 Then minutes = CDbl(parts(1))
+    If UBound(parts) >= 2 Then seconds = CDbl(parts(2))
+    
+    ' 総角度を計算
+    totalDegrees = degrees + (minutes / 60) + (seconds / 3600)
+    
+    ' 方位を判定して返す
+    Select Case totalDegrees
+        Case 0 To 90
+            sok_compass = "NE" ' 北東
+        Case 90 To 180
+            sok_compass = "SE" ' 南東
+        Case 180 To 270
+            sok_compass = "SW" ' 南西
+        Case 270 To 360
+            sok_compass = "NW" ' 北西
+        Case Else
+            sok_compass = "Invalid" ' 無効な値
+    End Select
+End Function
