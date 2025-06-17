@@ -64,7 +64,6 @@ End Function
 
 
 
-
 ' sok_sum: 指定範囲内の度分秒文字列を合計し、結果を "度°分′秒″" 形式で返す関数
 Public Function sok_sum(rng As Range) As String
     Dim cell As Range
@@ -103,6 +102,10 @@ Public Function sok_sum(rng As Range) As String
     ' 結果を文字列として返す
     sok_sum = totalDegrees & "°" & totalMinutes & "′" & totalSeconds & "″"
 End Function
+
+
+
+'----------------------------------------------------------------------------------'
 
 ' 度分秒文字列を度（Decimal Degree）に変換
 Private Function DMSStringToDecimal(s As String) As Double
@@ -163,6 +166,10 @@ Private Function DecimalToDMSString(ByVal decimalDegrees As Double) As String
     DecimalToDMSString = deg & "°" & min & "′" & sec & "″"
 End Function
 
+'----------------------------------------------------------------------------------'
+
+
+
 ' sin度分秒の計算
 Function sok_sin(dmsString As String) As Double
     Dim deg As Double
@@ -179,6 +186,7 @@ End Function
 
 
 
+' 方位角から方位を返す関数
 Function sok_compass(angle As String) As String
     Dim degrees As Double
     Dim minutes As Double
@@ -214,6 +222,9 @@ Function sok_compass(angle As String) As String
     End Select
 End Function
 
+
+
+' 方位角を計算する関数
 Function sok_azimuth(dmsString As String) As String
     Dim deg As Double
     deg = DMSStringToDecimal(dmsString) ' 文字列を10進数度に変換
