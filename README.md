@@ -8,15 +8,21 @@
 
 <br>
 
-DMS Calculator in Excel VBA 🌵
-Excel VBA Script that allows you to perform comfortable calculations of *DMS*  
-used in traverses using functions on Excel Cells.
+Normally Office Excel does not allow DMS calculations to be performed on cells. It is possible to do the calculation by using multiple cells and complicated conversion formulas, but it is very difficult. Therefore, we have developed a VBA Script that can perform DMS calculations on cells and still perform function calculations. Please check the following Demo for a simple usage. 🌵
 
 <br>
 
 <div align="center">
     <img src="./assets/DMS-Calculator-Demo.gif" width="450px">
 </div>
+
+<br>
+<br>
+
+Various functions can be auto-completed by entering the following prefixes on the cells.
+```
+=sok_
+```
 
 <br>
 
@@ -42,8 +48,7 @@ used in traverses using functions on Excel Cells.
 <br>
 
 > [!Note]  
-> This script is designed to work with Excel and VBA,  
-> and it may not function correctly in other environments.
+> This script is designed to work with Excel and VBA, and it may not function correctly in other environments.
 
 <br>
 
