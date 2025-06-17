@@ -13,7 +13,7 @@ used in traverses using functions on Excel Cells.
 ### Features
 - [x] Add and range specification.
 - [ ] Simplified handling of negative numbers.
-- [ ] Azimuth Logic.
+- [x] Azimuth Logic.
 - [x] Calculation of cos sin.
 - [x] Add Compass
 - [x] String to Decimal func.

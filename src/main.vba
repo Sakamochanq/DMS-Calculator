@@ -133,6 +133,36 @@ Private Function DMSStringToDecimal(s As String) As Double
     DMSStringToDecimal = sign * (deg + min / 60 + sec / 3600)
 End Function
 
+' 10進数度を度分秒文字列に変換
+Private Function DecimalToDMSString(ByVal decimalDegrees As Double) As String
+    Dim deg As Long
+    Dim min As Long
+    Dim sec As Long
+    Dim remainder As Double
+    
+    If decimalDegrees < 0 Then
+        DecimalToDMSString = "-" & DecimalToDMSString(-decimalDegrees)
+        Exit Function
+    End If
+    
+    deg = Int(decimalDegrees)
+    remainder = (decimalDegrees - deg) * 60
+    min = Int(remainder)
+    sec = Round((remainder - min) * 60)
+    
+    ' 秒が60になる場合の繰り上がり処理
+    If sec = 60 Then
+        sec = 0
+        min = min + 1
+    End If
+    If min = 60 Then
+        min = 0
+        deg = deg + 1
+    End If
+
+    DecimalToDMSString = deg & "°" & min & "′" & sec & "″"
+End Function
+
 ' sin度分秒の計算
 Function sok_sin(dmsString As String) As Double
     Dim deg As Double
@@ -182,4 +212,23 @@ Function sok_compass(angle As String) As String
         Case Else
             sok_compass = "Invalid" ' 無効な値
     End Select
+End Function
+
+Function sok_azimuth(dmsString As String) As String
+    Dim deg As Double
+    deg = DMSStringToDecimal(dmsString) ' 文字列を10進数度に変換
+    
+    Dim result As Double
+    
+    If deg < 90 Then
+        result = deg
+    ElseIf deg < 180 Then
+        result = 180 - deg
+    ElseIf deg < 270 Then
+        result = deg - 180
+    Else
+        result = 360 - deg
+    End If
+    
+    sok_azimuth = DecimalToDMSString(result)
 End Function
