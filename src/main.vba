@@ -5,6 +5,39 @@
 
 '---------------------------------------------------------------------------------'
 
+' sok_add関数：DMS文字列を加算する
+Function sok_add(ParamArray angles() As Variant) As String
+    Dim total As Double
+    Dim i As Long
+    
+    total = 0
+    For i = LBound(angles) To UBound(angles)
+        total = total + DMSStringToDecimal(CStr(angles(i)))
+    Next i
+    
+    sok_add = DecimalToDMSString(total)
+End Function
+
+' sok_sub関数：DMS文字列を減算する（左から順に）
+Function sok_sub(ParamArray angles() As Variant) As String
+    Dim total As Double
+    Dim i As Long
+    
+    If UBound(angles) < 0 Then
+        Exit Function
+    End If
+    
+    total = DMSStringToDecimal(CStr(angles(0)))
+    
+    For i = 1 To UBound(angles)
+        total = total - DMSStringToDecimal(CStr(angles(i)))
+    Next i
+    
+    sok_sub = DecimalToDMSString(total)
+End Function
+
+
+
 ' Function sok_def(ParamArray args() As Variant) As String
 '     Dim totalSeconds As Double
 '     totalSeconds = 0
@@ -243,3 +276,4 @@ Function sok_azimuth(dmsString As String) As String
     
     sok_azimuth = DecimalToDMSString(result)
 End Function
+
