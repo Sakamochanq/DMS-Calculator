@@ -5,62 +5,62 @@
 
 '---------------------------------------------------------------------------------'
 
-Function sok_def(ParamArray args() As Variant) As String
-    Dim totalSeconds As Double
-    totalSeconds = 0
+' Function sok_def(ParamArray args() As Variant) As String
+'     Dim totalSeconds As Double
+'     totalSeconds = 0
     
-    Dim i As Long
-    For i = LBound(args) To UBound(args)
-        Dim s As String
-        s = Trim(CStr(args(i)))
+'     Dim i As Long
+'     For i = LBound(args) To UBound(args)
+'         Dim s As String
+'         s = Trim(CStr(args(i)))
         
-        If s = "" Then GoTo NextArg
+'         If s = "" Then GoTo NextArg
         
-        ' 符号を判定
-        Dim sign As Double
-        sign = 1
-        If Left(s, 1) = "-" Then
-            sign = -1
-            s = Mid(s, 2)
-        End If
+'         ' 符号を判定
+'         Dim sign As Double
+'         sign = 1
+'         If Left(s, 1) = "-" Then
+'             sign = -1
+'             s = Mid(s, 2)
+'         End If
         
-        ' 度分秒を数値に分解
-        Dim deg As Double, min As Double, sec As Double
-        deg = 0: min = 0: sec = 0
+'         ' 度分秒を数値に分解
+'         Dim deg As Double, min As Double, sec As Double
+'         deg = 0: min = 0: sec = 0
         
-        If InStr(s, "°") > 0 Then
-            deg = Val(Left(s, InStr(s, "°") - 1))
-            s = Mid(s, InStr(s, "°") + 1)
-        End If
+'         If InStr(s, "°") > 0 Then
+'             deg = Val(Left(s, InStr(s, "°") - 1))
+'             s = Mid(s, InStr(s, "°") + 1)
+'         End If
         
-        If InStr(s, "′") > 0 Then
-            min = Val(Left(s, InStr(s, "′") - 1))
-            s = Mid(s, InStr(s, "′") + 1)
-        End If
+'         If InStr(s, "′") > 0 Then
+'             min = Val(Left(s, InStr(s, "′") - 1))
+'             s = Mid(s, InStr(s, "′") + 1)
+'         End If
         
-        If InStr(s, "″") > 0 Then
-            sec = Val(Left(s, InStr(s, "″") - 1))
-        End If
+'         If InStr(s, "″") > 0 Then
+'             sec = Val(Left(s, InStr(s, "″") - 1))
+'         End If
         
-        ' 秒に変換して加算
-        totalSeconds = totalSeconds + sign * (deg * 3600 + min * 60 + sec)
-NextArg:
-    Next i
+'         ' 秒に変換して加算
+'         totalSeconds = totalSeconds + sign * (deg * 3600 + min * 60 + sec)
+' NextArg:
+'     Next i
     
-    ' 結果を度分秒に変換
-    Dim finalDeg As Long, finalMin As Long, finalSec As Long
-    Dim absSec As Long
-    Dim neg As Boolean: neg = (totalSeconds < 0)
+'     ' 結果を度分秒に変換
+'     Dim finalDeg As Long, finalMin As Long, finalSec As Long
+'     Dim absSec As Long
+'     Dim neg As Boolean: neg = (totalSeconds < 0)
     
-    absSec = Abs(totalSeconds)
-    finalDeg = Int(absSec / 3600)
-    finalMin = Int((absSec Mod 3600) / 60)
-    finalSec = absSec Mod 60
+'     absSec = Abs(totalSeconds)
+'     finalDeg = Int(absSec / 3600)
+'     finalMin = Int((absSec Mod 3600) / 60)
+'     finalSec = absSec Mod 60
     
-    If neg Then finalDeg = -finalDeg
+'     If neg Then finalDeg = -finalDeg
     
-    sok_def = finalDeg & "°" & finalMin & "′" & finalSec & "″"
-End Function
+'     sok_def = finalDeg & "°" & finalMin & "′" & finalSec & "″"
+' End Function
 
 
 
