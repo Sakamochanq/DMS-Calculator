@@ -270,8 +270,10 @@ Function sok_azimuth(dmsString As String) As String
         result = 180 - deg
     ElseIf deg < 270 Then
         result = deg - 180
-    Else
+    ElseIf deg < 360 Then
         result = 360 - deg
+    Else
+        result = deg - 360
     End If
     
     sok_azimuth = DecimalToDMSString(result)
