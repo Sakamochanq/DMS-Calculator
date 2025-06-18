@@ -13,7 +13,9 @@ Normally Office Excel does not allow DMS calculations to be performed on cells. 
 <br>
 
 <div align="center">
-    <img src="./assets/DMS-Calculator-Demo.gif" width="450px">
+    <a href="#">
+        <img src="./assets/DMS-Calculator-Demo.gif" width="450px">
+    </a>
 </div>
 
 <br>
