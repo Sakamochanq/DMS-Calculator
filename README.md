@@ -89,6 +89,8 @@ A3 = 0°20′0″
 
 - Contributing by [Github Copilot](https://github.com/features/copilot)
 
+- Translation by [DeepL](https://www.deepl.com/)
+
 <br>
 
 ### License
