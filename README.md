@@ -58,7 +58,16 @@ Various functions can be auto-completed by entering the following prefixes on th
 A1 = 179°50′0″
 B1 = 0°10′0″
 
-=sok_def(A1, B1) #180°0′0″
+=sok_add(A1, B1) #180°0′0″
+```
+
+<br>
+
+```python
+A1 = 180°50′0″
+B1 = 0°50′0″
+
+=sok_sub(A1, B1) #180°0′0″
 ```
 
 <br>
