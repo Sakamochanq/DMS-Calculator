@@ -268,7 +268,7 @@ Function sok_compass(angle As String) As String
         Case 270 To 360
             sok_compass = "NW" ' 北西
         Case Else
-            sok_compass = "Invalid" ' 無効な値
+            sok_compass = "#BONK!" ' ボンク！
     End Select
 End Function
 
