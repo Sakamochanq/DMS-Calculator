@@ -5,6 +5,23 @@
 
 '---------------------------------------------------------------------------------'
 
+' ランダムな度分秒を返す関数（デバッグ用）
+Function sok_random() As String
+    Dim deg As Integer
+    Dim min As Integer
+    Dim sec As Integer
+
+    Randomize ' 毎回異なる乱数にする
+
+    deg = Int(Rnd() * 360)      ' 0 ～ 359
+    min = Int(Rnd() * 60)       ' 0 ～ 59
+    sec = Int(Rnd() * 60)       ' 0 ～ 59
+
+    sok_random = deg & "°" & min & "′" & sec & "″"
+End Function
+
+
+
 ' sok_add関数：DMS文字列を加算する
 Function sok_add(ParamArray angles() As Variant) As String
     Dim total As Double
