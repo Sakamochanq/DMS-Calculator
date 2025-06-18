@@ -65,7 +65,7 @@ End Function
 
 
 ' sok_sum: 指定範囲内の度分秒文字列を合計し、結果を "度°分′秒″" 形式で返す関数
-Public Function sok_sum(rng As Range) As String
+Public Function sok_sumAll(rng As Range) As String
     Dim cell As Range
     Dim totalDegrees As Long
     Dim totalMinutes As Long
@@ -100,7 +100,7 @@ Public Function sok_sum(rng As Range) As String
     totalMinutes = totalMinutes Mod 60
     
     ' 結果を文字列として返す
-    sok_sum = totalDegrees & "°" & totalMinutes & "′" & totalSeconds & "″"
+    sok_sumAll = totalDegrees & "°" & totalMinutes & "′" & totalSeconds & "″"
 End Function
 
 
