@@ -28,6 +28,12 @@ Various functions can be auto-completed by entering the following prefixes on th
 
 <br>
 
+### Why sok ?
+
+測量 = sokuryou = sok :)
+
+<br>
+
 ### Features
 - [x] Add and range specification.
 - [ ] Simplified handling of negative numbers.
