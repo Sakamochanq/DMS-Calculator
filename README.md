@@ -8,7 +8,11 @@
 
 <br>
 
-Normally Office Excel does not allow DMS calculations to be performed on cells. It is possible to do the calculation by using multiple cells and complicated conversion formulas, but it is very difficult. Therefore, we have developed a VBA Script that can perform DMS calculations on cells and still perform function calculations. Please check the following Demo for a simple usage. 🌵
+日本語　｜　[English](./docs/README-en.md)
+
+<br>
+
+デフォルトの Office Excel では 度分秒 をフル文字列として扱ってしまい、四則演算を行うことが出来ません。複数のセルを使用し、複雑な返還式を経て計算を行うことは可能ですが、非常に面倒です。そこでセル上で度分秒計算を実行できるVBAScriptを開発しました。sok関数内に度分秒を代入することで簡単に計算を行うことが出来ます。Excelでのメリットは度分秒に対してオートフィルと行えるという点です。簡単な使い方は以下のGIF画像を参照してください。 🌵
 
 <br>
 
@@ -21,46 +25,45 @@ Normally Office Excel does not allow DMS calculations to be performed on cells. 
 <br>
 <br>
 
-Various functions can be auto-completed by entering the following prefixes on the cells.
+関数内で以下のPrefixを入力することで、様々なsok関数を自動補完できます
 ```
 =sok_
 ```
 
 <br>
 
-### Why sok ?
+### sok って何 ?
 
 測量 = sokuryou = sok :)
 
 <br>
 
-### Features
-- [x] Add and range specification.
-- [ ] Simplified handling of negative numbers.
-- [x] Azimuth Logic.
-- [x] Calculation of cos sin.
-- [x] Add Compass
-- [x] String to Decimal func.
-- [ ] Refactoring.
+### 機能
+- [x] 指定範囲での加算、減算
+- [ ] 度分秒の負の値計算の簡略化
+- [x] 方位角の算出
+- [x] cos、sinの計算
+- [x] コンパス
+- [x] 文字列からDecimal型に変換
+- [ ] コードのリファクタリング
 
 <br>
 
-### Usage
+### 使用方法
 
-1.  Open Excel and VBA Editor.
+1.  Excelより開発タブからVBAEditorを起動します。
 
-2.  Add main.vbs as a new module.
+2.  標準モジュールとして `main.vba` を追加します。
 
-3.  Use the functions provided in the script to perform calculations on your data.  
+3.  保存し、セル上で関数を使用します。  
 
 <br>
 
 > [!Note]  
-> This script is designed to work with Excel and VBA, and it may not function correctly in other environments.
-
+> このスクリプトはExcelVBAで動作するように設計されており、他の環境では正しく動作しない可能性があります。
 <br>
 
-### Example
+### 使用例
 
 ```python
 A1 = 179°50′0″
@@ -91,13 +94,13 @@ A3 = 0°20′0″
 <br>
 <hr>
 
-### Author 
+### 作成者 .他
 
-- Developing by [Sakamochanq](https://github.com/Sakamochanq)
+- [Sakamochanq](https://github.com/Sakamochanq) による開発
 
-- Contributing by [Github Copilot](https://github.com/features/copilot)
+- [Github Copilot](https://github.com/features/copilot) による開発支援
 
-- Translation by [DeepL](https://www.deepl.com/)
+- [DeepL](https://www.deepl.com/) によるドキュメントの翻訳
 
 <br>
 
