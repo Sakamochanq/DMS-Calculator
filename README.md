@@ -34,7 +34,7 @@
 
 ### sok って何 ?
 
-測量 = sokuryou = sok :)
+測量 = sokuryou = sok
 
 <br>
 
@@ -51,11 +51,21 @@
 
 ### 使用方法
 
-1.  Excelより開発タブからVBAEditorを起動します。
+1.　以下のコマンドをターミナルで実行し、リポジトリをクローンします。
 
-2.  標準モジュールとして `main.vba` を追加します。
+```
+git clone https://github.com/Sakamochanq/DMS-Calculator.git
+```
 
-3.  保存し、セル上で関数を使用します。  
+<br>
+
+2.　Excelより開発タブからVBAEditorを起動します。
+
+3.　任意のWorkSheetに標準モジュールとして `./src/main.vba` を追加します。
+
+4.　保存したら、セル上で **sok関数** を使用できます。
+
+5.　通常のxlsx形式ではなく、マクロ有効形式(*.xlsm)で保存することでマクロを常時実行できます。
 
 <br>
 
@@ -114,4 +124,4 @@ A1 = 180°0′0″
 
 ### License
 
-Release under the [MIT License](https://github.com/Sakamochanq/DMS-Calculator/blob/master/LICENSE)
+Release under the [MIT](https://github.com/Sakamochanq/DMS-Calculator/blob/master/LICENSE) LICENSE
