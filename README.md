@@ -96,7 +96,7 @@ A3 = 0°20′0″
 ```python
 A1 = 180°0′0″
 
-=sok_compass(A1) #S
+=sok_compass(A1) #SE
 ```
 
 <br>
