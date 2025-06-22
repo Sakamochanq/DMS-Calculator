@@ -34,7 +34,7 @@ Various functions can be auto-completed by entering the following prefixes on th
 
 ### Why sok ?
 
-測量 = sokuryou = sok :)
+測量 = sokuryou = sok
 
 <br>
 
@@ -51,11 +51,21 @@ Various functions can be auto-completed by entering the following prefixes on th
 
 ### Usage
 
-1.  Open Excel and VBA Editor.
+1.　Repository Clone
 
-2.  Add main.vbs as a new module.
+```
+git clone https://github.com/Sakamochanq/DMS-Calculator.git
+```
 
-3.  Use the functions provided in the script to perform calculations on your data.  
+<br>
+
+2.　From Excel launch VBAEditor from the Development tab.
+
+3.　Add `./src/main.vba` to any Worksheet.
+
+4.　Once saved, you can use the **sok func** on the cell.
+
+5.　Macros can be executed at any time by saving in macro-enabled format(*.xlsm) instead of the usual xlsx format.
 
 <br>
 
@@ -93,6 +103,14 @@ A3 = 0°20′0″
 ```
 
 <br>
+
+```python
+A1 = 180°0′0″
+
+=sok_compass(A1) #SE
+```
+
+<br>
 <hr>
 
 ### Author 
@@ -107,4 +125,4 @@ A3 = 0°20′0″
 
 ### License
 
-Release under the [MIT License](https://github.com/Sakamochanq/DMS-Calculator/blob/master/LICENSE)
+Release under the [MIT](https://github.com/Sakamochanq/DMS-Calculator/blob/master/LICENSE) LICENSE
