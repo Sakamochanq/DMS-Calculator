@@ -8,7 +8,7 @@
 
 <br>
 
-日本語　｜　[English](./docs/README-en.md)
+日本語　｜　[English](./docs/README-en.md)　｜　[한국어](./docs/README-kr.md)
 
 <br>
 
