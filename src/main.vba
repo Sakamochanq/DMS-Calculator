@@ -1,7 +1,7 @@
 
 ' 度分秒の計算を行う関数（Sok）
 ' Develeping & Refactoring by Sakamochanq.
-' Special thanks Github Copilot.
+' Special thanks Github Copilot & ChatGPT
 
 '---------------------------------------------------------------------------------'
 
